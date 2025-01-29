@@ -61,7 +61,7 @@ if [ -d /sys/devices/pwm_fan ]; then
 elif [ -d /sys/devices/platform/pwm_fan ]; then
     FAN_CTRL=/sys/devices/platform/pwm_fan/hwmon/hwmon0/pwm1
 elif [ -d /sys/devices/platform/gpio-fan ]; then
-    FAN_CTRL=fan_hwmon_path
+    FAN_CTRL=$fan_hwmon_path
 else
     exit 0
 fi
