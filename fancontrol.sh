@@ -1,5 +1,10 @@
 #!/bin/sh
 
+#Check if the script is already running, if it is then exit
+if [[ "$(ps | grep fancontrol | grep -v grep)" == *"/etc/fancontrol"* ]]; then
+	exit 1
+fi
+
 # OpenWRT fan control using RickStep and Chadster766's logic
 
 # SLEEP_DURATION and CPU_TEMP_CHECK need to be multiples of each other
