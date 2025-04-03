@@ -7,18 +7,18 @@ A replacement for default fan control for ASUS RT-AX89X running OpenWRT.
 
 ####To use it:
 
-    Download the new fan controller, save it to /etc/, and make it executable.
+Download the new fan controller, save it to /etc/, and make it executable.
 
-wget --no-check-certificate https://github.com/NotANewNick/ASUS-RT-AX89X-OpenWRT-Fan-Control/blob/main/fancontrol.sh -O /etc/fancontrol.sh
-chmod +x fancontrol.sh
+    wget --no-check-certificate https://github.com/NotANewNick/ASUS-RT-AX89X-OpenWRT-Fan-Control/blob/main/fancontrol.sh -O /etc/fancontrol.sh
+    chmod +x fancontrol.sh
 
-    Test it to make sure that it runs correctly.
+Test it to make sure that it runs correctly.
 
-/etc/fancontrol.sh verbose
+    /etc/fancontrol.sh verbose
 
-    Let it run in the background to keep your router cool.
+Let it run in the background to keep your router cool.
 
-/etc/fancontrol.sh &
+    cd /etc && sh fancontrol.sh $
 
 ####Disable the orginal fan controller.
 
